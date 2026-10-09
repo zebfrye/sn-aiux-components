@@ -13,6 +13,12 @@ Custom Lit elements for small UI primitives that `@servicenow/aiux` does not shi
 | `aiux-skeleton` | Loading placeholder | `shape`, `lines`, `width`, `height` |
 | `aiux-stat-tile` | KPI tile with delta and sparkline slot | `label`, `value`, `delta`, `lower-is-better`, `loading` |
 | `aiux-copy-button` / `aiux-code-block` | Copy to clipboard, read-only code block | `value`; event `aiux-copy`; `code`, `language`, `wrap` |
+| `aiux-breadcrumbs` | Trail with collapse-to-"…" overflow, cancelable click event | `items`, `max`, `separator`; event `aiux-breadcrumb-click` |
+| `aiux-segmented-control` | Single-select pill group, arrow-key roving focus | `options`, `value`; event `aiux-segment-change` |
+| `aiux-switch` | Standalone toggle, form-associated | `checked`, `disabled`, `name`, `value`; event `aiux-switch-change` |
+| `aiux-rating` | Star input/display, optional half steps | `value`, `max`, `allow-half`, `readonly`; event `aiux-rating-change` |
+| `aiux-json-viewer` | Collapsible JSON tree with copy-path | `data` or `json`, `expand-depth`; `expandAll()`/`collapseAll()` |
+| `aiux-markdown` | Sanitized GFM render (for AI/chat output) | `content`; needs optional peers `marked` + `dompurify` |
 
 ```ts
 import 'sn-aiux-components'; // registers every element

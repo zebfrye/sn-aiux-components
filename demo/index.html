@@ -63,6 +63,24 @@ gr.addQuery('active', true);
 gr.query();
       </aiux-code-block>
     </section>
+    <section id="nav">
+      <h2>Breadcrumbs / Segmented control</h2>
+      <aiux-breadcrumbs id="crumbs" max="3" separator="chevron" style="width:100%"></aiux-breadcrumbs>
+      <aiux-segmented-control id="seg" value="week" aria-label="Range"></aiux-segmented-control>
+    </section>
+    <section id="inputs">
+      <h2>Switch / Rating</h2>
+      <aiux-switch checked>Email alerts</aiux-switch>
+      <aiux-switch>Push</aiux-switch>
+      <aiux-switch disabled>Locked</aiux-switch>
+      <aiux-rating value="3.5" allow-half label="Quality"></aiux-rating>
+      <aiux-rating value="4" readonly></aiux-rating>
+    </section>
+    <section id="viewers">
+      <h2>JSON viewer / Markdown</h2>
+      <aiux-json-viewer id="json" expand-depth="2" style="width:100%"></aiux-json-viewer>
+      <aiux-markdown id="md" style="width:100%"></aiux-markdown>
+    </section>
     <script type="module" src="./main.ts"></script>
   </body>
 </html>
