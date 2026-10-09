@@ -1,0 +1,37 @@
+{
+  "name": "sn-aiux-components",
+  "version": "0.1.0",
+  "description": "Custom Lit elements that fill gaps in @servicenow/aiux (badge, tag, avatar, progress, skeleton, stat tile, copy button, code block)",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "@lit/localize": "^0.12.2",
+    "@servicenow/aiux": "^22.67.1",
+    "lit": "^3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@servicenow/aiux": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@lit/localize": "^0.12.2",
+    "@types/node": "^26.6.4",
+    "jsdom": "^26.0.0",
+    "lit": "^3.2.0",
+    "typescript": "^5.6.0",
+    "vite": "^6.0.0",
+    "vitest": "^3.0.0"
+  },
+  "license": "ISC"
+}

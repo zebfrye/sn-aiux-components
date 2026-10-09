@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>sn-aiux-components demo</title>
+    <style>
+      body { font: 16px/1.5 system-ui, sans-serif; margin: 2rem auto; max-width: 52rem; padding: 0 1rem; }
+      section { margin-block: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
+      h2 { width: 100%; font-size: 1rem; margin: 0; }
+      @media (prefers-color-scheme: dark) { body { background: #0d1117; color: #e6edf3; } }
+    </style>
+  </head>
+  <body>
+    <h1>sn-aiux-components</h1>
+    <section id="badges">
+      <h2>Badge / Tag</h2>
+      <aiux-badge>Neutral</aiux-badge>
+      <aiux-badge variant="success" dot>Resolved</aiux-badge>
+      <aiux-badge variant="warning" appearance="outline">Pending</aiux-badge>
+      <aiux-badge variant="error" appearance="solid" size="sm">P1</aiux-badge>
+      <aiux-tag variant="primary">network</aiux-tag>
+    </section>
+    <section id="avatars">
+      <h2>Avatar</h2>
+      <aiux-avatar name="Ada Lovelace" status="online"></aiux-avatar>
+      <aiux-avatar name="Grace Hopper" size="lg" status="busy"></aiux-avatar>
+      <aiux-avatar size="sm"></aiux-avatar>
+      <aiux-avatar-group max="3">
+        <aiux-avatar name="Ada Lovelace"></aiux-avatar>
+        <aiux-avatar name="Grace Hopper"></aiux-avatar>
+        <aiux-avatar name="Alan Turing"></aiux-avatar>
+        <aiux-avatar name="Linus Torvalds"></aiux-avatar>
+        <aiux-avatar name="Margaret Hamilton"></aiux-avatar>
+      </aiux-avatar-group>
+    </section>
+    <section id="progress">
+      <h2>Progress</h2>
+      <aiux-progress style="width:16rem" label="Upload" value="65" show-value></aiux-progress>
+      <aiux-progress style="width:16rem" variant="success" value="100"></aiux-progress>
+      <aiux-progress style="width:16rem" indeterminate label="Working"></aiux-progress>
+      <aiux-progress shape="circular" value="42" show-value></aiux-progress>
+      <aiux-progress shape="circular" indeterminate></aiux-progress>
+    </section>
+    <section id="skeleton">
+      <h2>Skeleton</h2>
+      <aiux-skeleton shape="circle"></aiux-skeleton>
+      <aiux-skeleton lines="3" width="16rem"></aiux-skeleton>
+      <aiux-skeleton shape="rect" width="10rem" height="4rem"></aiux-skeleton>
+    </section>
+    <section id="stats">
+      <h2>Stat tile</h2>
+      <aiux-stat-tile label="Open incidents" value="128" delta="-8.2" delta-label="vs last week" lower-is-better></aiux-stat-tile>
+      <aiux-stat-tile label="CSAT" value="4.6" delta="3" delta-unit="%"></aiux-stat-tile>
+      <aiux-stat-tile label="MTTR" loading></aiux-stat-tile>
+    </section>
+    <section id="copy">
+      <h2>Copy / Code block</h2>
+      <aiux-copy-button value="INC0010001"></aiux-copy-button>
+      <aiux-code-block language="javascript" style="width:100%">
+const gr = new GlideRecord('incident');
+gr.addQuery('active', true);
+gr.query();
+      </aiux-code-block>
+    </section>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
